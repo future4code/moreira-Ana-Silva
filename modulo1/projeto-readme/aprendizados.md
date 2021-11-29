@@ -1,0 +1,2 @@
+# Aprendizados da semana
+Na minha primeira semana de estudos da Labenu aprendi os comandos mais utilizados no **terminal git** e do **VScode**. Também pude aprender basicamente como utilizar a plataforma do **GitHub**.   
