@@ -9,6 +9,7 @@
     padding: 0;
 }
 
+
 body {
 
     font-family: Roboto;
@@ -117,6 +118,7 @@ div:last-child {
 table {
     width: 60%;
     text-align: center;
+    margin: auto
 }
 
 td button {
@@ -125,7 +127,6 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
-    
 }
 
 td button:hover {
@@ -139,15 +140,17 @@ td button:hover {
 
 }
 
-
 #back-button {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 100px;
     height: 20px;
     border: 1px solid black;
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    position:fixed;
+    top:50%; 
+    left:50%;
 }
 
 #back-button:hover {
