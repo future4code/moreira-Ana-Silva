@@ -9,6 +9,13 @@
     padding: 0;
 }
 
+body {
+
+    font-family: Roboto;
+
+}
+
+
 .container-do-search img{
     height: 15px;
     width: 15px;
