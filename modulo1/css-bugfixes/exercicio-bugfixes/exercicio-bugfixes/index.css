@@ -22,8 +22,11 @@ h2 {
 }
 
 input {
-    height: 20px;
-    width: 500px;
+    border-top-style: hidden;
+    border-right-style:hidden;
+    border-left-style: hidden;
+    border-bottom-width: 2px;
+    width: 400px;
 }
 
 button:focus {
@@ -43,7 +46,7 @@ div img {
 }
 
 .botao-amarelo {
-    background-color: #9f5a00;
+    background-color: #ffb85a;
     width: 250px;
     height: 40px;
     border-radius: 5px;
