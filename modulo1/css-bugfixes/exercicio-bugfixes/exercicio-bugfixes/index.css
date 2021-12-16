@@ -43,7 +43,7 @@ div img {
 }
 
 .botao-amarelo {
-    background-color: #ffaf43;
+    background-color: #9f5a00;
     width: 250px;
     height: 40px;
     border-radius: 5px;
@@ -110,12 +110,18 @@ table {
 }
 
 td button {
-    background-color: #fadf63;
+    background-color: #ffd000;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     color: black;
+    
 }
+
+td button:hover {
+    background-color: #d6b005;
+    color: white;
+  }
 
 .container-do-search {
     margin-top: 20px;
