@@ -152,7 +152,13 @@ function retornaPessoaAnonimizada(pessoa) {
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-
+    const podeEntrarNaMontanhaRussa = [];
+    for (const pessoa of pessoas) {
+      if (pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60) {
+        podeEntrarNaMontanhaRussa.push(pessoa);
+      }
+    }
+    return podeEntrarNaMontanhaRussa;
 }
 
 // EXERCÍCIO 13B
