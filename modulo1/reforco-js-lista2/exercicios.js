@@ -26,7 +26,13 @@ return array
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+
+const arrayPares = array.filter((numero) => {
+    if (numero % 2 === 0) {
+        return numero
+    }
+});
+return arrayPares 
 }
 
 // EXERCÍCIO 05
