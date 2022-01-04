@@ -154,9 +154,9 @@ function retornaPessoaAnonimizada(pessoa) {
 function retornaPessoasAutorizadas(pessoas) {
     const podeEntrarNaMontanhaRussa = [];
     for (const pessoa of pessoas) {
-      if (pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60) {
-        podeEntrarNaMontanhaRussa.push(pessoa);
-      }
+        if (pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60) {
+            podeEntrarNaMontanhaRussa.push(pessoa);
+        }
     }
     return podeEntrarNaMontanhaRussa;
 }
@@ -165,16 +165,16 @@ function retornaPessoasAutorizadas(pessoas) {
 function retornaPessoasNaoAutorizadas(pessoas) {
     const naoPodeEntrarNaMontanhaRussa = [];
     for (const pessoa of pessoas) {
-      if (pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade >= 60) {
-        naoPodeEntrarNaMontanhaRussa.push(pessoa);
-      }
+        if (pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade >= 60) {
+            naoPodeEntrarNaMontanhaRussa.push(pessoa);
+        }
     }
     return naoPodeEntrarNaMontanhaRussa;
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+    
 }
 
 // EXERCÍCIO 15A
