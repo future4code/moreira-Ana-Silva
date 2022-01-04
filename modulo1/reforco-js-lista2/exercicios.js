@@ -17,7 +17,11 @@ return (array.reverse())
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  
+
+array.sort(function (a, b) {
+    return a - b;
+})
+return array
 }
 
 // EXERCÍCIO 04
