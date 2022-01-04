@@ -5,19 +5,16 @@
 
 // EXERCÍCIO 01
 function retornaTamanhoArray(array) {
-
     return (array.length)
 }
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-
     return (array.reverse())
 }
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-
     array.sort(function (a, b) {
         return a - b;
     })
@@ -26,7 +23,6 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-
     const arrayPares = array.filter((numero) => {
         if (numero % 2 === 0) {
             return numero
@@ -80,11 +76,17 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
     return objetoNumeros
 }
 
-
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-
+    const arrayDePares = []
+    for (let contador = 0; arrayDePares.length < n; contador++) {
+        if (contador % 2 === 0) {
+            arrayDePares.push(contador)
+        }
+    }
+    return arrayDePares
 }
+
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
