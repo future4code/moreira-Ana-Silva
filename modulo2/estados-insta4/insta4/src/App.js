@@ -66,7 +66,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log (this.state.posts)
     const listaDePosts = this.state.posts.map((postagens) => {
       return (
         <div>
