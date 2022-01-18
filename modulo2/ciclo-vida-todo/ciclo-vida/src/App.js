@@ -21,7 +21,7 @@ const InputsContainer = styled.div`
 class App extends React.Component {
     state = {
       tarefas: [],
-      inputNovaTarefa: this,
+      inputNovaTarefa: "",
       filtro: ''
   }
 
