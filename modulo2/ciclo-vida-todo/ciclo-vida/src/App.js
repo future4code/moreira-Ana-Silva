@@ -30,10 +30,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    const tarefaSalva = JSON.parse(localStorage.getItem("tarefas"));
-    if (tarefaSalva){
-      this.setState({tarefas: tarefaSalva});
-    }
+    this.pegarTarefas()
   };
 
   onChangeInputNovaTarefa = (event) => {
@@ -52,6 +49,11 @@ class App extends React.Component {
 
       this.setState({tarefas: novaListaDeTarefas})
       this.setState({inputNovaTarefa: ""})
+  }
+
+  pegarTarefas = () => {
+    const tarefaSalva = JSON.parse(localStorage.getItem("tarefas"))
+    this.setState({tarefas: tarefaSalva})
   }
 
   selectTarefa = (id) => {
@@ -74,7 +76,7 @@ class App extends React.Component {
   }
 
   render() {
-    const listaFiltrada = this.state.tarefas.filter(tarefa => {
+    const listaFiltrada = this.state.tarefas.filter((tarefa) => {
       switch (this.state.filtro) {
         case 'pendentes':
           return !tarefa.completa
@@ -106,6 +108,7 @@ class App extends React.Component {
           {listaFiltrada.map(tarefa => {
             return (
               <Tarefa
+                key={tarefa.id}
                 completa={tarefa.completa}
                 onClick={() => this.selectTarefa(tarefa.id)}
               >
