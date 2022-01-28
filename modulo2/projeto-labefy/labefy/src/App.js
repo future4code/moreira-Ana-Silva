@@ -7,6 +7,16 @@ import InfoPlaylists from "./components/InfoPlaylists"
 class App extends React.Component {
   state = {
     telaAtual: "home",
+    clicarInfoUrl: "",
+  }
+
+  // irParaInfoPlaylist = (url) => {
+  //   this.setState({telaAtual: "info", clicarInfoUrl: url)
+  // }
+
+  voltarParaLista = () => {
+    this.setState({telaAtual: "playlist", clicarInfoUrl: ""})
+
   }
 
   escolherTela = (() => {
@@ -14,7 +24,9 @@ class App extends React.Component {
       case "home":
         return <Home/>
       case "playlist":
-        return <Playlists/>
+        return <Playlists irParaInfoPlaylist={this.irParaInfoPlaylist}/>
+      case "info":
+        return <InfoPlaylists voltarParaLista={this}url={this.state.clicarInfoUrl}/>
       default:
         return <Home/>
     }

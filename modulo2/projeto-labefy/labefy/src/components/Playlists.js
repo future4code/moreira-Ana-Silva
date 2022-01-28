@@ -22,7 +22,6 @@ class Playlists extends React.Component {
     inputEnter = (event) => {
         if (event.key === 'Enter') {
             this.criarPlaylist();
-            console.log("enter");
         };
     };
 
@@ -34,11 +33,7 @@ class Playlists extends React.Component {
        this.pegarPlaylist();
     }
 
-    adicionaPlaylist = (() => {
-        const playlistsNova = [...this.state.playlists, this.state.criar]
-
-    })
-
+    
     criarPlaylist = (() => {
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
         const body = {
@@ -49,6 +44,7 @@ class Playlists extends React.Component {
             .then((response) => {
                 alert("Playlist criada com sucesso!");
                 this.setState({ criar: "" });
+                this.pegarPlaylist()
             })
 
             .catch((error) => {
@@ -62,7 +58,6 @@ ${error.response.data.message}`)
 
         axios.get(url, { headers: { Authorization: "ana-karine" } })
             .then((response) => {
-                console.log (response)
                 this.setState({ playlists: response.data.result.list});
             })
             .catch((error) => {
@@ -72,28 +67,33 @@ ${error.response.data.message}`)
 
 
     deletarPlaylist = (id) => {
-        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlist${id}`
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`
 
         axios.delete(url, {
-            headers:
-                { Authorization: "ana-karine" }
-        })
+            headers:{ Authorization: "ana-karine" }})
 
             .then((response) => {
                 alert("Playlist deletada com sucesso!");
                 this.pegarPlaylist()
-                console.log (response)
             })
             .catch((error) => {
                 alert("Erro ao deletar a playlist, tente novamente!")
             })
     }
 
+    adicionaPlaylist = (() => {
+        const playlistNova = [...this.state.playlists, this.state.criar]
+
+    })
+
     render() {
+
         const listaPlaylists = this.state.playlists.map((lista) => {
-            return <CardUsuario key={lista.id}>{lista.name}
-                <button onClick={() => this.deletarPlaylist(lista.id)}>Deletar Playlist</button>
+            return ( 
+            <CardUsuario key={lista.id}>{lista.name}
+                <button onClick={() => this.deletarPlaylist(lista.id)}>Deletar</button>
             </CardUsuario>
+            )
         })
 
         return (
