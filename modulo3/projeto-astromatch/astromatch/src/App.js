@@ -1,12 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import TelaInicial from './Pages/TelaInicial/TelaInicial';
 
-const App = () => {
+
+function App () {
   return (
     <div>
-      <h1>COMEÇANDO PROJETO</h1>
+      <TelaInicial/>
     </div>
   );
 }
-
 
 export default App;
