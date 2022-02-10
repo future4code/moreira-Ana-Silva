@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import {ImgNome, ImgVoltar, BotaoVoltar, ContainerGeral, Posicao, CabecalhoCard, DivGeral, BotaoDeletar} from "./styled"
+import {ImgNome, ImgVoltar, BotaoVoltar, ContainerGeral, Posicao, CabecalhoCard, DivGeral, BotaoDeletar, ListaEstilo} from "./styled"
 import { BASE_URL } from '../../Constants/Url'
 import { Tooltip } from '@material-ui/core'
 import { Divider } from '@material-ui/core'
@@ -56,7 +56,7 @@ ${error.response.data}`)
 
     const listaDeMatches = matches.map((mat) => {
         return (
-            <div key={mat.id}>
+            <ListaEstilo key={mat.id}>
                 <ListItem >
                     <ListItemAvatar>
                         <Avatar src={mat.photo} alt="Imagem do Match"/>
@@ -64,7 +64,7 @@ ${error.response.data}`)
                     <ListItemText primary={mat.name}/>
                 </ListItem>
                 <Divider variant="inset"/>
-            </div>
+            </ListaEstilo>
         )
     });
 

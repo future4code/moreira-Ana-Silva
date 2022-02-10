@@ -55,3 +55,14 @@ export const BotaoDeletar = styled.div`
     background-color: #C2E8C2;
 }
 `
+export const ListaEstilo = styled.div`
+    width: 99.5%;
+    height: 4rem;
+    border: 1px solid #590040;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+&:hover{
+    background-color: rgba(255,255,255, 0.25);
+}
+` 
