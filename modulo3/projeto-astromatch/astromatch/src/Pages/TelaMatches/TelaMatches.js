@@ -1,6 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { BASE_URL } from '../../Constants/Url';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import {ImgNome, ImgVoltar, BotaoVoltar, ContainerGeral, Posicao, CabecalhoCard, DivGeral, BotaoDeletar} from "./styled"
+import { BASE_URL } from '../../Constants/Url'
+import { Tooltip } from '@material-ui/core'
+import { Divider } from '@material-ui/core'
+import { ListItem } from '@material-ui/core'
+import { ListItemAvatar } from '@material-ui/core'
+import { ListItemText } from '@material-ui/core'
+import Avatar from '@material-ui/core/Avatar'
 import NomeLogo from '../../Assets/nome.png'
 import Voltar from '../../Assets/voltar.png'
 
@@ -46,31 +53,49 @@ ${error.response.data}`)
 ${error.response.data}`)
             })
     })
+
     const listaDeMatches = matches.map((mat) => {
         return (
             <div key={mat.id}>
-                <h4>{mat.name}</h4>
-                <img src={mat.photo} alt="Imagem do Match" />
+                <ListItem >
+                    <ListItemAvatar>
+                        <Avatar src={mat.photo} alt="Imagem do Match"/>
+                    </ListItemAvatar>
+                    <ListItemText primary={mat.name}/>
+                </ListItem>
+                <Divider variant="inset"/>
             </div>
         )
     });
 
     return (
-        <div>
-
-            <div>
-                <img src={NomeLogo} alt="Nome Logomarca" />
-                <button onClick={props.irParaInicial}><img src={Voltar} alt="Ícone Voltar" /></button>
-            </div>
-
-            <div>
-                <button onClick={() => {
-                    if (window.confirm(`Você tem certeza que deseja deletar seus matches?`)) { return limparMatches() }
-                }}>Limpar swipes e matches</button>
-            </div>
+        <DivGeral>
+            <Posicao>
+            <ContainerGeral>
+            <CabecalhoCard>
+                <div>
+                <ImgNome src={NomeLogo} alt="Nome Logomarca"/>
+                </div>
+                <div>
+                <Tooltip title="Tela Inicial" disableInteractive>
+                    <BotaoVoltar onClick={props.irParaInicial}>
+                        <ImgVoltar src={Voltar} alt="Ícone Voltar"/>
+                    </BotaoVoltar>
+                </Tooltip>
+                </div>
+            </CabecalhoCard>
 
             {listaDeMatches}
-        </div>
+            </ContainerGeral>
+            </Posicao>
+
+            <div>
+                <BotaoDeletar onClick={() => {
+                    if (window.confirm(`Você tem certeza que deseja deletar seus matches?`)) { return limparMatches() }
+                }}>Limpar swipes e matches</BotaoDeletar>
+            </div>
+
+        </DivGeral>
     );
 }
 
