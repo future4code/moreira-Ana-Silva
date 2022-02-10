@@ -7,7 +7,7 @@ import ImagemAstrinhos from '../../Assets/Imagem.png'
 import Cancelar from '../../Assets/cancelar.png'
 import Verificado from '../../Assets/verificado.png'
 
-function TelaInicial() {
+function TelaInicial(props) {
 
     const [perfil, setPerfil] = useState([]);
 
@@ -41,7 +41,7 @@ ${error.response.data}`)
             choice: true,
         }
 
-        axios.get(`${BASE_URL}/choose-person`, body, header)
+        axios.post(`${BASE_URL}/choose-person`, body, header)
 
             .then((response) => {
                 if (response.data.isMatch) {
@@ -61,7 +61,7 @@ ${error.response.data}`)
 
             <DivCabecalho>
                 <ImgNome src={NomeLogo} alt="Nome Logomarca" />
-                <button><ImgRobozinhos src={ImagemAstrinhos} alt="Imagem Robôs" /></button>
+                <button onClick={props.irParaMatches}><ImgRobozinhos src={ImagemAstrinhos} alt="Ícone ir para Matches" /></button>
             </DivCabecalho>
 
             <ContainerCard>
@@ -76,8 +76,8 @@ ${error.response.data}`)
             </ContainerCard>
 
             <DivBotoes>
-                <button><ImgCancelar src={Cancelar} alt="ícone de X" /></button>
-                <button onClick={() => { escolherPessoa() }}><ImgVerificar src={Verificado} alt="Ícone de OK" /></button>
+                <button onClick={pegarPerfil}><ImgCancelar src={Cancelar} alt="ícone de Cancelar" /></button>
+                <button onClick={() => {escolherPessoa()}}><ImgVerificar src={Verificado} alt="Ícone de dar Match" /></button>
             </DivBotoes>
 
         </ContainerGeral>
