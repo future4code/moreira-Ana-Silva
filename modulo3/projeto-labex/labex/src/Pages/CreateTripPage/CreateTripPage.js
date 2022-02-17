@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { DivFormulario } from './Styled'
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -8,13 +9,18 @@ import Button from '@material-ui/core/Button'
 import Header from '../../Components/Header/Header'
 
 function CreateTripPage() {
+    const history = useNavigate()
+
+    const irParaAdminHome = (() => {
+        history("/admin/trips/list");
+    })
+    
     return (
         <div>
             <Header />
-            <Button variant="contained">HOME</Button>
 
             <div>
-                <h1>Inscreva-se para uma viagem</h1>
+                <h1>Criar Viagem</h1>
 
                 <DivFormulario>
 
@@ -58,7 +64,7 @@ function CreateTripPage() {
 
                 </DivFormulario>
 
-                <Button variant="contained">VOLTAR</Button>
+                <Button variant="contained" onClick={irParaAdminHome}>VOLTAR</Button>
                 <Button variant="contained">CRIAR</Button>
             </div>
 

@@ -1,20 +1,15 @@
-import React from "react";
+import React from 'react'
+import Router from './Router/Router'
 import Global from './Styled'
-import HomePage from "./Pages/HomePage/HomePage";
-import ListTripsPage from "./Pages/ListTripsPage/ListTripsPage";
-import ApplicationFormPage from "./Pages/ApplicationFormPage/ApplicationFormPage";
-import LoginPage from "./Pages/LoginPage/LoginPage";
-import AdminHomePage from "./Pages/AdminHomePage/AdminHomePage";
-import TripDetailsPage from "./Pages/TripDetailsPage/TripDetailsPage";
-import CreateTripPage from "./Pages/CreateTripPage/CreateTripPage";
+
 
 function App() {
   return (
-    <div >
+    <div>
       <Global/>
-      <h1>ATRASADA COM O PROJETO</h1>
+      <Router/>
     </div>
-  );
+  )
 }
 
 export default App;

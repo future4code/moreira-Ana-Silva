@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Button from '@material-ui/core/Button'
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -8,6 +9,11 @@ import Header from '../../Components/Header/Header';
 import { DivFormulario } from './Styled'
 
 function ApplicationFormPage() {
+    const history = useNavigate()
+
+    const irParaTripList= (() => {
+        history("/trips/list");
+    })
 
     return (
         <div>
@@ -70,7 +76,7 @@ function ApplicationFormPage() {
 
                 </DivFormulario>
 
-                <Button variant="contained">VOLTAR</Button>
+                <Button variant="contained" onClick={irParaTripList}>VOLTAR</Button>
                 <Button variant="contained">ENVIAR</Button>
             </div>
         </div>

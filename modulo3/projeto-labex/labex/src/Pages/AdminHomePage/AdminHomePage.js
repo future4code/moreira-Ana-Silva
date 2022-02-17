@@ -1,21 +1,37 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { } from './Styled'
 import Button from '@material-ui/core/Button'
 import Header from '../../Components/Header/Header'
 
 function AdminHomePage() {
+    const history = useNavigate()
+
+    const irParaHomePage = (() => {
+        history("/");
+    })
+
+    const irParaCreatTrip = (() => {
+        history("/admin/trips/create");
+    })
+
+
+    const irParaLogin = (() => {
+        history("/login");
+    })
+
     return (
         <div>
             <Header />
-            <Button variant="contained">HOME</Button>
 
             <div>
 
                 <h1>Painel Administrativo</h1>
 
                 <div>
-                <Button variant="contained">CRIAR VIAGEM</Button>
-                <Button variant="contained">LOGOUT</Button>
+                    <Button variant="contained" onClick={irParaHomePage}>VOLTAR </Button>
+                    <Button variant="contained" onClick={irParaCreatTrip}>CRIAR VIAGEM</Button>
+                    <Button variant="contained" onClick={irParaLogin}>LOGOUT</Button>
                 </div>
 
                 <div>
