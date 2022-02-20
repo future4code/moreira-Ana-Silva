@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Texto = styled.span`
     color: #ffffff;
     background: black;
-    font-size: 200px;
+    font-size: 150px;
     font-family: Arial;
     text-transform: uppercase;
 
@@ -48,7 +48,53 @@ export const DivContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 100px;
-    flex-direction: column;
     align-items: center;
+    flex-direction: row-reverse;
+    margin: 0;
+`
+export const ImgAstro = styled.img`
+    width: 48.6vw;
+    height: 99.49vh;
+`
+export const DivLogo = styled.div`
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 40px;
+`
+export const DivBotoes = styled.div`
+    display: flex;
+    gap: 30px;
+`
+export const Botoes = styled.button`
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 0.6em;
+    cursor: pointer;
+      -ms-flex-item-align: center;
+          align-self: center;
+    font-size: 0.9rem;;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1em 2em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    border-color: #682082;
+    color: #E8E8E8;
+    box-shadow: 0 0 40px 40px #682082 inset, 0 0 0 0 #682082;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
 
+&:hover {
+  box-shadow: 0 0 10px 0 #682082 inset, 0 0 10px 4px #682082;
+  color: #E8E8E8;
+}
+`
+export const Alinhar = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 `
