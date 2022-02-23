@@ -1,14 +1,16 @@
 import React from 'react'
 import Router from './Routes/Router'
+import { ThemeProvider } from '@mui/material'
+import Tema from './Constants/Tema'
 
 function App() {
 
   return (
-    <div >
+    <ThemeProvider theme={Tema}>
 
       <Router />
 
-    </div>
+    </ThemeProvider>
   )
 }
 

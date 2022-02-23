@@ -5,12 +5,16 @@ import PaginaLogin from '../Pages/PaginaLogin/PaginaLogin'
 import PaginaCadastro from '../Pages/PaginaCadastro/PaginaCadastro'
 import PaginaPost from '../Pages/PaginaPost/PaginaPost'
 import PaginaErro from '../Pages/PaginaErro/PaginaErro'
+import Header from '../Components/Header/Header'
 
 function Router() {
 
     return (
 
         <BrowserRouter>
+
+            <Header />
+
             <Routes>
 
                 <Route path={"/"} element={<PaginaFeed />} />

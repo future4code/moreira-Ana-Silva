@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material'
-import { corPrimaria, corSecundaria, corNeutra } from './Cores';
+import { corPrimaria, corSecundaria, corNeutra, corNeutra2 } from './Cores';
 
-const theme = createTheme({
+const Tema = createTheme ({
     palette: {
         primary: {
             main: corPrimaria,
@@ -9,9 +9,9 @@ const theme = createTheme({
         },
         secondary: {
             main: corSecundaria,
-            contrastText: corNeutra
+            contrastText: corNeutra2
         }
     }
 })
 
-export default theme
+export default Tema

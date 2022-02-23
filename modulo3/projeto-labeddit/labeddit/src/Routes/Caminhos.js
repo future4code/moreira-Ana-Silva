@@ -1,19 +1,15 @@
-import { useNavigate } from "react-router-dom"
-
-navigate = useNavigate()
-
-export const irParaFeed = () => {
+export const irParaFeed = (navigate) => {
     navigate("/")
 }
 
-export const irParaLogin = () => {
+export const irParaLogin = (navigate) => {
     navigate("/login")
 }
 
-export const irParaCadatro = () => {
+export const irParaCadatro = (navigate) => {
     navigate("/cadastro")
 }
 
-export const irParaPost = (id) => {
+export const irParaPost = (navigate, id) => {
     navigate(`/post/${id}`)
 }
