@@ -4,7 +4,7 @@ function PaginaErro() {
 
     return (
         <div>
-            <h1>PÁGINA DE CATASTRO</h1>
+            <h1>PÁGINA DE ERRO</h1>
         </div>
     )
 

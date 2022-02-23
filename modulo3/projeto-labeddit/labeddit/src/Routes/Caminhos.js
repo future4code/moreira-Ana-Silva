@@ -1,9 +1,9 @@
-export const irParaFeed = (navigate) => {
+export const irParaLogin = (navigate) => {
     navigate("/")
 }
 
-export const irParaLogin = (navigate) => {
-    navigate("/login")
+export const irParaFeed = (navigate) => {
+    navigate("/feed")
 }
 
 export const irParaCadatro = (navigate) => {

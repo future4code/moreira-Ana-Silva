@@ -6,6 +6,7 @@ export const ContainerTela = styled.div`
     align-items: center;
     width: 100vw;
     margin-top: 10vh;
+    gap:20px
 `
 export const ContainerInputs = styled.div`
     display: flex;
@@ -15,13 +16,14 @@ export const ContainerInputs = styled.div`
     max-width: 450px;
     margin-bottom: 20px;
 `
-export const ContainerFormulario = styled.div`
+export const ContainerFormulario = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80vw;
     max-width: 450px;
     margin-bottom: 20px;
+    gap: 20px;
 `
 export const ContainerBotao = styled.div`
     width: 80vw;

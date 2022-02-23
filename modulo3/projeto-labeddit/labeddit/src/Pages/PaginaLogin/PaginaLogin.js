@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { irParaCadatro } from '../../Routes/Caminhos'
 import FormularioLogin from './FormularioLogin'
 import { ContainerTela, ImgLogo, ContainerBotao } from './Style'
-import Logo1 from '../../Assets/logo1.png'
-import { Button } from '@mui/material'
+import Logo1 from '../../Assets/logo2.png'
+import Button from '@mui/material/Button'
 
 
 function PaginaLogin() {
@@ -21,10 +21,10 @@ function PaginaLogin() {
                     onClick={() => irParaCadatro(navigate)}
                     type={"submit"}
                     color={"secondary"}
-                    variant="text"
+                    variant={"text"}
                     margin={"normal"}
                     fullWidth>
-                    Não possui conta? Cadastre-se
+                    Não possui uma conta? Cadastre-se
                 </Button>
             </ContainerBotao>
 

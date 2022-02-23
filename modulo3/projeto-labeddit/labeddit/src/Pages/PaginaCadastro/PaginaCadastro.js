@@ -1,13 +1,19 @@
 import React from 'react'
+import FormularioCadastro from './FormularioCadastro'
+import { ContainerTela, ImgLogo } from './Style'
+import Logo1 from '../../Assets/logo2.png'
+
 
 function PaginaCadastro() {
 
     return (
-        <div>
-            <h1>PÁGINA DE CATASTRO</h1>
-        </div>
-    )
+        <ContainerTela>
+            <ImgLogo src={Logo1} alt="Logo Labeddit" />
 
+            <FormularioCadastro />
+
+        </ContainerTela>
+    )
 }
 
 export default PaginaCadastro

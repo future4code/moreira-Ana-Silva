@@ -16,10 +16,9 @@ function Router() {
             <Header />
 
             <Routes>
+                <Route path={"/"} element={<PaginaLogin />} />
 
-                <Route path={"/"} element={<PaginaFeed />} />
-
-                <Route path={"/login"} element={<PaginaLogin />} />
+                <Route path={"/feed"} element={<PaginaFeed />} />
 
                 <Route path={"/cadastro"} element={<PaginaCadastro />} />
 
