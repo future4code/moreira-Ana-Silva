@@ -1,6 +1,9 @@
 import React from 'react'
+import useProtected from '../../Hooks/UseProtected'
 
 function PaginaPost() {
+
+    useProtected()
 
     return (
         <div>

@@ -6,20 +6,20 @@ import TextField from '@mui/material/TextField'
 import { Button } from '@mui/material'
 import { fazerLogin } from '../../Services/Usuarios'
 
-function FormularioLogin() {
+function FormularioLogin({setTextoDoBotao}) {
 
-    const  [ form, onChange, limparInputs ] = useForm({ email: "", password: "" })
     const navigate = useNavigate()
-
-    const onSubmitForm = (event) => {
+    const  [ form, onChange, limparInputs ] = useForm({ email: "", password: "" })
+    
+    const onSubmitLogin = (event) => {
         event.preventDefault()
-        fazerLogin(form, limparInputs, navigate)
+        fazerLogin(form, limparInputs, navigate, setTextoDoBotao)
     }
 
     return (
 
         <ContainerInputs>
-            <ContainerFormulario onSubmit={onSubmitForm}>
+            <ContainerFormulario onSubmit={onSubmitLogin}>
 
                 <TextField
                     name={"email"}

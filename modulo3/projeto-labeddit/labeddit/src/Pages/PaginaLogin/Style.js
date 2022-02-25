@@ -6,7 +6,7 @@ export const ContainerTela = styled.div`
     align-items: center;
     width: 100vw;
     margin-top: 10vh;
-    gap:20px
+    gap:20px;
 `
 export const ContainerInputs = styled.div`
     display: flex;

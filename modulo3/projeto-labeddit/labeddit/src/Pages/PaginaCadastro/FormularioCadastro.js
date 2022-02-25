@@ -1,21 +1,28 @@
 import React from 'react'
 import useForm from '../../Hooks/UseForm'
+import { useNavigate } from 'react-router-dom'
 import { ContainerInputs, ContainerFormulario } from './Style'
 import TextField from '@mui/material/TextField'
 import { Button } from '@mui/material'
+import { cadastrarUsuario } from  '../../Services/Usuarios'
+import useUnprotected from '../../Hooks/UseUnprotected'
 
-function FormularioCadastro() {
+function FormularioCadastro({setTextoDoBotao}) {
 
-    const { form, onChange, limparCampos } = useForm({ username: "", email: "", password: "" })
-
-    const onSubmitForm = (event) => {
+    
+    const [ form, onChange, limparInputs ] = useForm({ username: "", email: "", password: "" })
+    const navigate = useNavigate()
+    useUnprotected()
+    
+    const onSubmitCadastrar = (event) => {
         event.preventDefault()
+        cadastrarUsuario(form, limparInputs, navigate, setTextoDoBotao)
     }
 
     return (
 
         <ContainerInputs>
-            <ContainerFormulario onSubmit={onSubmitForm}>
+            <ContainerFormulario onSubmit={onSubmitCadastrar}>
 
                 <TextField
                     name={"username"}
