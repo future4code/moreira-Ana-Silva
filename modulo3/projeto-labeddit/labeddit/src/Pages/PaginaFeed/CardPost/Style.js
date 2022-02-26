@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Card from '@mui/material/Card'
+import Box from '@mui/material/Box'
 import CardContent from '@mui/material/CardContent'
 
 export const StyleCardContainer = styled(Card)`
@@ -16,4 +17,23 @@ export const StyleCardContent = styled(CardContent)`
   align-items: center;
   justify-content: center;
   height: 200px;
+`
+export const StyleBotoes = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+`
+export const StyleConteudo = styled.div`
+  display: flex;
+`
+export const StyleSeta = styled(Box)`
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  flex-direction: column;
+`
+export const StyleConteudos = styled(Box)`
+  margin-left: 15px;
+  margin-bottom: 50px;
 `

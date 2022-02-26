@@ -17,7 +17,7 @@ function Router({setTextoDoBotao}) {
 
                 <Route path={"/feed"} element={<PaginaFeed />} />
 
-                <Route path={"/post:id"} element={<PaginaPost />} />
+                <Route path={"/post/:id"} element={<PaginaPost />} />
 
                 <Route path={"*"} element={<PaginaErro />} />
             </Routes>

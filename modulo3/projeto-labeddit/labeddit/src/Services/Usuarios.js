@@ -25,6 +25,7 @@ export const cadastrarUsuario = (body, limparInputs, navigate, setTextoDoBotao) 
         .post(`${BASE_URL}/users/signup`, body)
 
         .then((response) => {
+            alert("Uusário cadastrado com sucesso!")
             localStorage.setItem('token', response.data.token)
             limparInputs()
             irParaFeed(navigate)

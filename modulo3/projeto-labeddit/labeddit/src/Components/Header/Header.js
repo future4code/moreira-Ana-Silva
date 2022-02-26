@@ -27,7 +27,7 @@ function Header({textoDoBotao, setTextoDoBotao}) {
     return (
         <AppBar position="static">
             <ToolbarStyle>
-                <Button onClick={() => irParaFeed(navigate)}> <LogoImg src={Logo} alt="Logo Labeddit" /> </Button>
+                <Button onClick={() => irParaFeed(navigate)} title="Feed"> <LogoImg src={Logo} alt="Logo Labeddit" /> </Button>
                 <Button onClick={onClickTextoBotao} color="inherit">{textoDoBotao}</Button>
             </ToolbarStyle>
         </AppBar>
