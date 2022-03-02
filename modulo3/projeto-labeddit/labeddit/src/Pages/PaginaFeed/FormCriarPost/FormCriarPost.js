@@ -1,9 +1,8 @@
 import React from 'react'
 import useForm from '../../../Hooks/UseForm'
 import { criarPostagem } from '../../../Services/Posts'
-import ImgAvatar from '../../../Assets/avatar.png'
 import { ContainerForm } from './Style'
-import { TextField, Avatar, CardHeader, Button } from '@mui/material'
+import { TextField, Button, Box } from '@mui/material'
 
 function FormCriarPost() {
 
@@ -15,46 +14,53 @@ function FormCriarPost() {
     }
 
     return (
-        <ContainerForm>
+        <div>
+
             <form onSubmit={onSubmitPostagem}>
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe" src={ImgAvatar} />
-                    }
-                />
 
-                <TextField
-                    name={"title"}
-                    value={form.title}
-                    onChange={onChange}
-                    label="Título do Post"
-                    variant="outlined"
-                    type={"text"}
-                    fullWidth
-                    required
-                />
+                <ContainerForm>
 
-                <TextField
-                    name={"body"}
-                    value={form.body}
-                    onChange={onChange}
-                    label="No que você está pensando?"
-                    type={"text"}
-                    fullWidth
-                    required
-                    multiline
-                    rows={6}
-                    defaultValue="Default Value"
-                />
+                    <TextField
+                        name={"title"}
+                        value={form.title}
+                        onChange={onChange}
+                        label="Título do Post"
+                        color={"secondary"}
+                        variant="outlined"
+                        type={"text"}
+                        fullWidth
+                        required
+                    />
+                </ContainerForm>
+
+                <Box>
+                    <TextField
+                        name={"body"}
+                        value={form.body}
+                        onChange={onChange}
+                        label="No que você está pensando?"
+                        type={"text"}
+                        color={"secondary"}
+                        fullWidth
+                        required
+                        multiline
+                        rows={6}
+                        defaultValue="Default Value"
+                    />
+                </Box>
+
                 <Button
                     type={"submit"}
-                    color={"secondary"}
-                    variant="contained">
-                    POSTAR
+                    margin={"normal"}
+                    color={"primary"}
+                    variant="contained"
+                    fullWidth>
+                    PUBLICAR
                 </Button>
 
             </form>
-        </ContainerForm>
+
+        </div >
     )
 }
 

@@ -10,18 +10,18 @@ import { BASE_URL } from '../../../Constants/Urls'
 import AddIcon from '@mui/icons-material/Add';
 import { StyleCardContainer, StyleConteudo, StyleBotoes, StyleSeta, StyleConteudos } from './Style'
 import { irParaPost } from '../../../Routes/Caminhos';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams} from 'react-router-dom';
+import { ContentCutOutlined } from '@mui/icons-material';
 
 function CardPost() {
 
     const navigate = useNavigate()
-    const posts = useRequestData([], `${BASE_URL}/posts`)
+    const [posts] = useRequestData([], `${BASE_URL}/posts`)
 
     const onClickDetalhes= (id) => {
-        irParaPost(navigate, id)
-
+        irParaPost (navigate, id)
     }
-
+    
     const listaDePosts = posts && posts.map((post) => {
         const data = new Date(post.createdAt)
         const novaData = data.toDateString();
@@ -51,7 +51,7 @@ function CardPost() {
                                 avatar={
                                     <Avatar aria-label="recipe" src={ImgAvatar} />
                                 }
-                                title={`Enviado por ${post.username} em ${novaData} às ${horas}`}
+                                title={`Postado por ${post.username} às ${horas} de ${novaData}`}
                             />
                             
                             <StyleConteudos >
@@ -76,7 +76,7 @@ function CardPost() {
 
                                 <IconButton color="secondary" title="Comentários" variant={"h6"}>{post.commentCount}<ChatBubbleOutlineIcon /></IconButton>
 
-                                <IconButton color="secondary" title="Ver Mais" onClick = {() => onClickDetalhes (post.id)}><AddIcon/></IconButton>
+                                <IconButton color="secondary" title="Ver Mais" onClick = {() => onClickDetalhes ( post.id)}><AddIcon/></IconButton>
 
                             </Box>
 

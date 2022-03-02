@@ -11,5 +11,5 @@ export const irParaCadatro = (navigate) => {
 }
 
 export const irParaPost = (navigate, id) => {
-    navigate(`/post/${id}`)
+    navigate(`/feed/post/${id}`)
 }

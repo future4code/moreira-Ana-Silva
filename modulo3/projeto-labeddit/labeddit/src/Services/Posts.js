@@ -6,7 +6,7 @@ export const criarPostagem = (body, limparInputs) => {
     axios
         .post(`${BASE_URL}/posts`, body, {
         headers: {
-                Authorization: localStorage.getItem('token')
+                Authorization: window.localStorage.getItem('token')
             }
         })
 
@@ -20,3 +20,4 @@ export const criarPostagem = (body, limparInputs) => {
             alert(`Erro ao criar postagem, tente novamente! ${erro.response.data}.`)
         })
 }
+

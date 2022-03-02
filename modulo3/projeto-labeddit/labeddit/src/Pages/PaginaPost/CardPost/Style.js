@@ -8,10 +8,19 @@ export const StyleCardContainer = styled(Card)`
     background-color: #def2fe;
     flex-direction: column;
     width: 80vw;
-    max-width:700px;
+    max-width:600px;
     margin: 20px;
 `
-
+export const StyleCardContainer2 = styled.div`
+    display: flex;
+    background-color: #def2fe;
+    flex-direction: column;
+    width: 80vw;
+    max-width:600px;
+    border-radius: 20px 40px;
+    box-shadow: 5px 5px 5px -6px;
+    margin: 20px;
+`
 export const StyleCardContent = styled(CardContent)`
   display: flex;
   align-items: center;
@@ -20,7 +29,7 @@ export const StyleCardContent = styled(CardContent)`
 `
 export const StyleBotoes = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 
 `

@@ -1,23 +1,23 @@
 import React from 'react'
-import useProtected from '../../Hooks/UseProtected'
 import { useParams } from 'react-router-dom'
-import UseRequestData from '../../Hooks/UseRequestData'
-import {BASE_URL} from '../../Constants/Urls'
-import CardPost from '../PaginaFeed/CardPost/CardPost'
+import {ContainerTela} from './Style'
+import useProtected from '../../Hooks/UseProtected'
+import CardPost from './CardPost/CardPost'
+import FormComentario from './FormComentario/FormComentario'
 
-function PaginaPost() {
-
-    useProtected()
-    // const parametro = useParams()
-    // const post = UseRequestData({}, `${BASE_URL}/post/${parametro.id}/comments`)
+function PaginaPost({getData}) {
     
+    useProtected()
+    const params = useParams()
 
     return (
-        <div>
-           <CardPost/>
-        </div>
-    )
+        <ContainerTela>
 
+           <CardPost params={params} getData={getData}/>
+           <FormComentario  params={params} getData={getData}/>
+           
+        </ContainerTela>
+    )
 }
 
 export default PaginaPost

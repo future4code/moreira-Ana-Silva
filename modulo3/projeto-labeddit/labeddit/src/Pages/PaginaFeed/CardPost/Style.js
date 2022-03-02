@@ -8,10 +8,9 @@ export const StyleCardContainer = styled(Card)`
     background-color: #def2fe;
     flex-direction: column;
     width: 80vw;
-    max-width:700px;
+    max-width:600px;
     margin: 20px;
 `
-
 export const StyleCardContent = styled(CardContent)`
   display: flex;
   align-items: center;

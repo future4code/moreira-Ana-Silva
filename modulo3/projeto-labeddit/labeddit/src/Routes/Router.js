@@ -9,7 +9,7 @@ import PaginaErro from '../Pages/PaginaErro/PaginaErro'
 function Router({setTextoDoBotao}) {
 
     return (
-
+            
             <Routes>
                 <Route path={"/"} element={<PaginaLogin setTextoDoBotao={setTextoDoBotao}/>} />
 
@@ -17,7 +17,7 @@ function Router({setTextoDoBotao}) {
 
                 <Route path={"/feed"} element={<PaginaFeed />} />
 
-                <Route path={"/post/:id"} element={<PaginaPost />} />
+                <Route path={"/feed/post/:id"} element={<PaginaPost />} />
 
                 <Route path={"*"} element={<PaginaErro />} />
             </Routes>
