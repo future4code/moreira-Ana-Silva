@@ -98,7 +98,7 @@ function CardPost({ params, getData }) {
 
     return (
         <div>
-            {filtrarPost}
+            {filtrarPost && filtrarPost.length > 0 ? filtrarPost : <h1>Caregando...</h1>}
             {listaComentarios}
         </div>
     )

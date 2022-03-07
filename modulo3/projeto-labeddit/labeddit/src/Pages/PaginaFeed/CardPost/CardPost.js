@@ -95,7 +95,7 @@ function CardPost() {
 
     return (
         <div>
-            {listaDePosts}
+            {listaDePosts && listaDePosts.length > 0 ? listaDePosts : <h1>Caregando...</h1>}
         </div>
     )
 }
