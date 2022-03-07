@@ -21,7 +21,7 @@ function CardPost() {
     const onClickDetalhes= (id) => {
         irParaPost (navigate, id)
     }
-    
+      
     const listaDePosts = posts && posts.map((post) => {
         const data = new Date(post.createdAt)
         const novaData = data.toDateString();
