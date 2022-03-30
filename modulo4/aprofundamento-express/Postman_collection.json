@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "c885517f-7a7e-4196-aee0-ec3193ea32d7",
+		"name": "Aprofundamento-express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAffair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/affair",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"affair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAffairStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/affair/:status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"affair",
+						":status"
+					],
+					"variable": [
+						{
+							"key": "status",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAffairUser",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAffair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"userId\": 5,\r\n        \"id\": 12,\r\n        \"title\": \"Dançar\",\r\n        \"completed\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/createAffair",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"createAffair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeStatus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/affair/:affairId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"affair",
+						":affairId"
+					],
+					"variable": [
+						{
+							"key": "affairId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/affair/:affairId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"affair",
+						":affairId"
+					],
+					"variable": [
+						{
+							"key": "affairId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
