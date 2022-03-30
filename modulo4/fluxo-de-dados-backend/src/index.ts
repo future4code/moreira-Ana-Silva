@@ -29,10 +29,10 @@ app.post("/create-product", (req, res) => {
         if (!newProduct.name || !newProduct.price || !newProduct.id) {
             throw new Error("Algum campo do produto está vazio!")
         }
-        if (!newProduct.name || typeof newProduct.name !== "string") {
+        if (typeof newProduct.name !== "string") {
             throw new Error("O nome do produto é inválido!")
         }
-        if (!newProduct.price || typeof newProduct.price !== "number") {
+        if (typeof newProduct.price !== "number") {
             throw new Error("O preço digitado precisa ser um número!")
         }
         if (newProduct.price <= 0) {
