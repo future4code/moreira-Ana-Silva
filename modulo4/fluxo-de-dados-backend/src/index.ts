@@ -36,7 +36,7 @@ app.post("/create-product", (req, res) => {
             throw new Error("O preço digitado precisa ser um número!")
         }
         if (newProduct.price <= 0) {
-            throw new Error("O preço digitado precisa ser maior ou igual a zero!")
+            throw new Error("O preço digitado precisa ser maior do que zero!")
         }
 
         products.push(newProduct)
@@ -54,7 +54,7 @@ app.post("/create-product", (req, res) => {
             case "O preço digitado precisa ser um número!":
                 res.status(422).send(error.message)
                 break
-            case "O preço digitado precisa ser maior ou igual a zero!":
+            case "O preço digitado precisa ser maior do que zero!":
                 res.status(422).send(error.message)
                 break
             default:
@@ -84,7 +84,7 @@ app.put("/products/:id", (req, res) => {
             throw new Error("O preço digitado precisa ser um número!")
         }
         if (newPrice <= 0) {
-            throw new Error("O preço digitado precisa ser maior ou igual a zero!")
+            throw new Error("O preço digitado precisa ser maior do que zero!")
         }
 
         const updatePriceProduct = products.map(product => {
@@ -110,7 +110,7 @@ app.put("/products/:id", (req, res) => {
             case "O preço digitado precisa ser um número!":
                 res.status(422).send(error.message)
                 break
-            case "O preço digitado precisa ser maior ou igual a zero!":
+            case "O preço digitado precisa ser maior do que zero!":
                 res.status(422).send(error.message)
                 break
             case "Produto não foi encontrado, id informado está inválido!":
