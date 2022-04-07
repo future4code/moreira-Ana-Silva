@@ -1,4 +1,4 @@
-<h1 align="center">Banco de Dados e Introdução a SQL</h1>
+<h1 align="center">Relações SQL</h1>
 
 <div id= "top" align="center" ><img src="https://user-images.githubusercontent.com/94838711/162326286-5ac1d8b5-7302-4706-a78c-2eea76edf40a.jpg" width="500px"/>
 </div>
