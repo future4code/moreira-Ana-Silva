@@ -1,11 +1,19 @@
 import React from 'react'
+
 import { } from './Styled'
 
-const ButtonsFilter = () => {
+const ButtonsFilter = (props) => {
+
+    const [value, setValue] = React.useState(0);
+    const { handleGenre} = props
+    
+    const handleChange = (event, newValue) => {
+        setValue(newValue)
+    }
 
     return (
-        <div>
-            <button>Ação</button>
+        <div onChange={handleChange} value={value}>
+            <button onClick={() => handleGenre('')}>Ação</button>
             <button>Aventura</button>
             <button>Animação</button>
             <button>Comédia</button>

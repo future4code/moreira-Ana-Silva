@@ -2,13 +2,13 @@ import React from 'react'
 import ButtonsFilter from './ButtonsFilter'
 import { Div, StyleTitulo } from './Styled'
 
-const Filters = () => {
+const Filters = (props) => {
 
     return (
         <Div >
             <div>
                 <StyleTitulo>Milhões de filmes, séries e pessoas para descobrir. Explore já.</StyleTitulo>
-                <button>FILTRE POR</button>
+                <p>FILTRE POR:</p>
                 <ButtonsFilter />
             </div>
         </Div>
