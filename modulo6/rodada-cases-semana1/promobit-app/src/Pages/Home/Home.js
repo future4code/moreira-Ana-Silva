@@ -1,29 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import UseRequestData from '../../Hooks/UseRequestData'
-import { BASE_URL } from '../../Constants/Urls'
 import { API_KEY } from '../../Constants/APIKey'
+import { BASE_URL } from '../../Constants/Urls'
 import Filters from '../../Components/Filters/Filters'
 import Header from '../../Components/Header/Header'
 import CardMovie from '../../Components/CardMovie/CardMovie'
-import { ListaFilmes } from './Styled'
+import { ListaFilmes, Container, ContainerFilter } from './Styled'
 
 const Home = () => {
 
-  const [data, loading] = UseRequestData([], `${BASE_URL}/popular?${API_KEY}&language=pt-BR&page=1`)
-  const [genre, setGenre] = useState('')
+  const [data, loading] = UseRequestData([], `${BASE_URL}/movie/popular?${API_KEY}&language=pt-BR&page=1`)
 
-  // useEffect(() => {
-  // }, [restaurants])
-
-  // const handleGenre = (value) => {
-  //   setGenre(value)
-  // }
-
+  //PEGA A LISTA DOS FILMES
   const listMovies = data.results && data.results.map((movie) => {
     return (
-
       <CardMovie key={movie.id} movie={movie} />
-
     )
   })
 
@@ -31,11 +22,13 @@ const Home = () => {
     <div >
       <Header />
 
-      <Filters />
+        <Filters />
 
-      <ListaFilmes>
-        {listMovies}
-      </ListaFilmes>
+      <Container>
+        <ListaFilmes>
+          {listMovies}
+        </ListaFilmes>
+      </Container>
 
     </div>
   )

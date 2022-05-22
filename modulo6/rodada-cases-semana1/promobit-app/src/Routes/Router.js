@@ -1,8 +1,8 @@
 import React from 'react'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Home from '../Pages/Home/Home'
 import DetailsPage from '../Pages/DetailsPage/DetailsPage'
 import ErrorPage from '../Pages/ErrorPage/ErrorPage'
-import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 
 function Router() {
