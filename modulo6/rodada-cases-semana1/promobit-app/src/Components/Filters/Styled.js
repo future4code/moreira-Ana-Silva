@@ -36,7 +36,7 @@ button{
     margin-left:10px;
     font-weight: bold;
     font-size: 14px;
-    color: #323232;
+    color: #000;
     padding: 8px 16px;
     height: 33px;
     border: transparent;

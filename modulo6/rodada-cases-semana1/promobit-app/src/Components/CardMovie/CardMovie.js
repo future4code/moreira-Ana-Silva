@@ -26,3 +26,4 @@ const CardMovie = ({ movie }) => {
 }
 
 export default CardMovie
+ 
