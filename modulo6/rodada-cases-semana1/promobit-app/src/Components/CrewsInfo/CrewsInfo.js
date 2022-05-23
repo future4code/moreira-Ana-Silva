@@ -6,8 +6,8 @@ import { API_KEY } from '../../Constants/APIKey'
 import { CrewsDiv } from './Styled'
 
 const CrewsInfo = () => {
+    
     const params = useParams()
-
     const [credits, loading] = UseRequestData([], `${BASE_URL}/movie/${params.id}/credits?${API_KEY}&language=pt-BR`)
 
     //PEGA OS CRÉDITOS DO FILME

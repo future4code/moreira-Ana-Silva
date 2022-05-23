@@ -8,8 +8,8 @@ import { Container, FilmeImg, DivInfo, InfoFilme, AvaFilme, SinopseFilme } from 
 import Percentage from '../../Components/PercentageVote/PercentageVote'
 
 const CardDetails = () => {
+    
     const params = useParams()
-
     const [data] = UseRequestData([], `${BASE_URL}/movie/${params.id}?${API_KEY}&language=pt-BR`)
     const [detail] = UseRequestData([], `${BASE_URL}/movie/${params.id}/release_dates?${API_KEY}&language=pt-BR`)
 

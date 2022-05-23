@@ -8,9 +8,9 @@ import { BASE_URL, IMG_URL } from '../../Constants/Urls'
 import { CardFilmes, FilmesImg, TituloFilme, DataFilme, TituloRec, DivRec, ListaFilmes } from './Styled'
 
 const Recommended = () => {
+    
     const Navigate = useNavigate()
     const params = useParams()
-
     const [recommendations] = UseRequestData([], `${BASE_URL}/movie/${params.id}/recommendations?${API_KEY}&language=pt-BR`)
 
     const onClickInfoMovie = (id) => {

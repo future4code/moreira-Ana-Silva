@@ -6,8 +6,8 @@ import { BASE_URL, IMG_URL } from '../../Constants/Urls'
 import { CardAtor, DivActor, NomeAtor, TituloElenco, ContainerElenco, ContainerCarrossel } from './Styled'
 
 const CastCarousel = () => {
+    
     const params = useParams()
-
     const [credits, loading] = UseRequestData([], `${BASE_URL}/movie/${params.id}/credits?${API_KEY}&language=pt-BR`)
 
     //PEGA O ELENCO DO FILME

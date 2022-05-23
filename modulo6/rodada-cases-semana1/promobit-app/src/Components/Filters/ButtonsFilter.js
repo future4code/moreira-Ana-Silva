@@ -7,7 +7,6 @@ import { Container } from './Styled'
 const ButtonsFilter = () => {
 
     const [data] = UseRequestData([], `${BASE_URL}/genre/movie/list?${API_KEY}&language=en-US`)
-   
     const [value, setValue] = React.useState(0);
     const [genre, setGenre] = useState('')
 
