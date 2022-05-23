@@ -12,9 +12,8 @@ export const FilmeImg = styled.img`
     box-shadow: -4px 3px 8px -4px #000000;
 &:hover{
     cursor: pointer;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 `
 export const TituloFilme = styled.p`

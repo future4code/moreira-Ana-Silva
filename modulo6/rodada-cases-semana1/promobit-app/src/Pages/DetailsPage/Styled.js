@@ -117,7 +117,7 @@ export const TituloElenco = styled.div`
     color:#131313;
 `
 export const TituloTrailer = styled.div`
-    margin-top: 30px;
+    margin-top: 60px;
     margin-left: 240px;
     font-size: 25px;
     font-weight: bold;
@@ -139,4 +139,20 @@ export const DivRec = styled.div`
     align-items:center;
     margin-top:30px;
 `
-
+export const Player = styled.div`
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+iframe {
+  position: absolute;
+  top: 20px;
+  left: 14%;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  border: none;
+  border-radius: 5px;
+}
+`

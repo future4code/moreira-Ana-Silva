@@ -12,9 +12,8 @@ export const FilmesImg = styled.img`
     box-shadow: -4px 3px 8px -4px #000000;
 &:hover{
     cursor: pointer;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 `
 export const TituloFilme = styled.p`
@@ -29,7 +28,7 @@ export const DataFilme = styled.p`
     line-height: 0px;
 `
 export const TituloRec = styled.div`
-    margin-top: 120px;
+margin-top: -300px;
     margin-left: 240px;
     font-size: 25px;
     font-weight: bold;

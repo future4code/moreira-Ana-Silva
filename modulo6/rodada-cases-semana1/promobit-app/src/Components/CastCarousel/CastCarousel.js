@@ -13,8 +13,8 @@ const CastCarousel = () => {
     //PEGA O ELENCO DO FILME
     const rostersMovie = credits?.cast && credits?.cast.map((actor) => {
         return (
-            <CardAtor>
-                <DivActor>
+            <CardAtor key={actor.name}>
+                <DivActor >
                     <img src={IMG_URL + actor.profile_path} />
                     <NomeAtor>{actor.name}</NomeAtor>
                     <p>{actor.character}</p>

@@ -9,6 +9,15 @@ p{
     font-size: 14px;
     text-align: center;
 }
+@media screen and (max-width: 700px) {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+p{
+    margin-top: 100px;
+}
+}
 `
 export const DivT = styled.div`
     display: flex;
@@ -24,6 +33,15 @@ h1{
     width: 700px;
     text-align: center;
 }
+@media screen and (max-width: 700px) {
+h1{
+    font-size: 24px;
+    margin: 0;
+    line-height: 28px;
+    width: 80%;
+    text-align: center;
+}
+}
 `
 export const Container = styled.div`
     display: flex;
@@ -31,6 +49,12 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+@media screen and (max-width:700px){
+    display: grid;
+    width: 80%;
+    row-gap:5px;
+    margin-left: 40px;
+}
 button{
     text-align:center;
     margin-left:10px;
@@ -42,6 +66,13 @@ button{
     border: transparent;
     border-radius: 5px;
     background-color: #fff;
+@media screen and (max-width: 700px) {
+    font-size: 13px;
+    height: 30px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
 :hover{
     cursor: pointer;
 }

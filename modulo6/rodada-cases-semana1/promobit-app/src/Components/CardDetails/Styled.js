@@ -12,7 +12,7 @@ h1{
 }
 `
 export const FilmeImg = styled.img`
-    width:380px;
+    width:350px;
     border-radius:4px;
     box-shadow: -4px 3px 8px -4px #000000;
     margin-top: 70px;
@@ -30,7 +30,8 @@ export const InfoFilme = styled.div`
 export const AvaFilme = styled.div`
     font-size: 13px;
     font-weight:200;
-    width: 10%;
+    width: 15%;
+    display: flex;
 `
 export const SinopseFilme = styled.div`
     display:flex;

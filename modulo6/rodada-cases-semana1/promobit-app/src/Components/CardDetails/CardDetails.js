@@ -1,10 +1,10 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import UseRequestData from '../../Hooks/UseRequestData'
 import CrewsInfo from '../CrewsInfo/CrewsInfo'
 import { API_KEY } from '../../Constants/APIKey'
 import { BASE_URL, IMG_URL } from '../../Constants/Urls'
-import { Container, FilmeImg, DivInfo, InfoFilme, AvaFilme, SinopseFilme,  } from './Styled'
+import { Container, FilmeImg, DivInfo, InfoFilme, AvaFilme, SinopseFilme } from './Styled'
+import { useParams } from 'react-router-dom'
 
 const CardDetails = () => {
     const params = useParams()
@@ -27,6 +27,13 @@ const CardDetails = () => {
     let minutes = all % 60;
     let hours = (all - minutes) / 60
 
+    //CONVERTE AVALIAÇÃO PARA PORCENTAGEM
+    let number = data.vote_average
+    let percentage = number / 10 * 100
+
+    // PEGA O ANO DO FILME
+    const year = data.release_date?.split('-')
+
     return (
         <Container>
             <div>
@@ -34,7 +41,7 @@ const CardDetails = () => {
             </div>
 
             <DivInfo>
-                <h1>{data?.title} (Ano do Filme)</h1>
+                <h1>{data?.title} ({year?.[0]})</h1>
 
                 <InfoFilme>
                     <p>{movieDetails?.[0]?.release_dates?.[0].certification} anos</p>
@@ -47,10 +54,10 @@ const CardDetails = () => {
                 </InfoFilme>
 
                 <AvaFilme>
-                    {data.vote_average}
-                    Avaliação dos usuários
+                   <div>{percentage} %</div>
+                   <p>Avaliação dos usuários</p> 
                 </AvaFilme>
-
+                
                 <SinopseFilme>
                     <h1>Sinopse</h1>
                     <p>{data.overview}</p>
