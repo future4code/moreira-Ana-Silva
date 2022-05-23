@@ -4,6 +4,10 @@ import "react-circular-progressbar/dist/styles.css";
 
 const Percentage = ({ percentage }) => {
 
+    if(isNaN(percentage)){
+        percentage = 0
+    }
+
     return (
         <div >
             <CircularProgressbar
