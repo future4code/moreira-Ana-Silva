@@ -8,7 +8,7 @@ import { CrewsDiv } from './Styled'
 const CrewsInfo = () => {
     const params = useParams()
 
-    const [credits] = UseRequestData([], `${BASE_URL}/movie/${params.id}/credits?${API_KEY}&language=pt-BR`)
+    const [credits, loading] = UseRequestData([], `${BASE_URL}/movie/${params.id}/credits?${API_KEY}&language=pt-BR`)
 
     //PEGA OS CRÉDITOS DO FILME
     const coreTeam = credits.crew && credits.crew

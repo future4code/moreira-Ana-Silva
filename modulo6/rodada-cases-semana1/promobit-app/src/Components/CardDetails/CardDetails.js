@@ -1,10 +1,11 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import UseRequestData from '../../Hooks/UseRequestData'
 import CrewsInfo from '../CrewsInfo/CrewsInfo'
 import { API_KEY } from '../../Constants/APIKey'
 import { BASE_URL, IMG_URL } from '../../Constants/Urls'
 import { Container, FilmeImg, DivInfo, InfoFilme, AvaFilme, SinopseFilme } from './Styled'
-import { useParams } from 'react-router-dom'
+import Percentage from '../../Components/PercentageVote/PercentageVote'
 
 const CardDetails = () => {
     const params = useParams()
@@ -54,10 +55,10 @@ const CardDetails = () => {
                 </InfoFilme>
 
                 <AvaFilme>
-                   <div>{percentage} %</div>
-                   <p>Avaliação dos usuários</p> 
+                    <div> <Percentage percentage={percentage}/></div>
+                    <p>Avaliação dos usuários</p>
                 </AvaFilme>
-                
+
                 <SinopseFilme>
                     <h1>Sinopse</h1>
                     <p>{data.overview}</p>

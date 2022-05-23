@@ -30,8 +30,14 @@ export const InfoFilme = styled.div`
 export const AvaFilme = styled.div`
     font-size: 13px;
     font-weight:200;
-    width: 15%;
     display: flex;
+div{
+    width: 28%;
+}
+p{
+    width: 18%;
+    margin-left: -18%;
+}
 `
 export const SinopseFilme = styled.div`
     display:flex;

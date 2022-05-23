@@ -8,7 +8,7 @@ import { CardAtor, DivActor, NomeAtor, TituloElenco, ContainerElenco, ContainerC
 const CastCarousel = () => {
     const params = useParams()
 
-    const [credits] = UseRequestData([], `${BASE_URL}/movie/${params.id}/credits?${API_KEY}&language=pt-BR`)
+    const [credits, loading] = UseRequestData([], `${BASE_URL}/movie/${params.id}/credits?${API_KEY}&language=pt-BR`)
 
     //PEGA O ELENCO DO FILME
     const rostersMovie = credits?.cast && credits?.cast.map((actor) => {
@@ -29,7 +29,7 @@ const CastCarousel = () => {
 
             <ContainerElenco>
                 <ContainerCarrossel>
-                    {rostersMovie}
+                {rostersMovie}
                 </ContainerCarrossel>
             </ContainerElenco>
         </div>

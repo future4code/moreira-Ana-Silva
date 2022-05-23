@@ -4,10 +4,10 @@ import { API_KEY } from '../../Constants/APIKey'
 import UseRequestData from '../../Hooks/UseRequestData';
 import { Container } from './Styled'
 
-const ButtonsFilter = (props) => {
+const ButtonsFilter = () => {
 
     const [data] = UseRequestData([], `${BASE_URL}/genre/movie/list?${API_KEY}&language=en-US`)
-    console.log(data)
+   
     const [value, setValue] = React.useState(0);
     const [genre, setGenre] = useState('')
 

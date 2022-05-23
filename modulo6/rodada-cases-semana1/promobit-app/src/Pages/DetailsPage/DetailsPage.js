@@ -9,12 +9,10 @@ import CastCarousel from '../../Components/CastCarousel/CastCarousel'
 import Recommended from '../../Components/Recommended/Recommended'
 import { TituloTrailer, Player } from './Styled'
 
-
 const DetailsPage = () => {
 
   const params = useParams()
   const [trailer] = UseRequestData([], `${BASE_URL}/movie/${params.id}/videos?${API_KEY}&language=pt-BR`)
-
 
   return (
     <div >
@@ -33,8 +31,6 @@ const DetailsPage = () => {
 
         <Recommended />
       </div>
-
-      
 
     </div>
   )
