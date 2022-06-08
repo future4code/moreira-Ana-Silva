@@ -5,6 +5,7 @@ const UseRequestData = (initialState, url) => {
 
     const [data, setData] = useState(initialState)
     const [loading, setLoading] = useState(false)
+
     useEffect(() => {
         setLoading(true)
 
