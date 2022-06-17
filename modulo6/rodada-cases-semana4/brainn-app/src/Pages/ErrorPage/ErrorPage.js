@@ -1,12 +1,35 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { goToHome } from '../../Routes/Coordinates'
+import Erro from '../../Assets/404.png'
+import { DivContainer, DivText, Img } from './Styled'
 
 const ErrorPage = () => {
+  const Navigate = useNavigate()
+
+  const onClickHome = () => {
+    goToHome(Navigate)
+  }
 
   return (
     <>
-      ERROR
+
+      <DivContainer >
+
+        <DivText>
+          <h1>Ooops! Você se perdeu?</h1>
+          <p>Infelizmente não localizamos esta página! Retorne para a página inicial.</p>
+          <button onClick={onClickHome}>Página Inicial</button>
+        </DivText>
+
+        <div>
+          <Img src={Erro} alt={"Imagem de erro"} />
+        </div>
+
+      </DivContainer>
     </>
   )
+
 }
 
 export default ErrorPage
