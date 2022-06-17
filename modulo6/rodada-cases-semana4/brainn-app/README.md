@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+<div id= "top" align="center">
+<img src="https://user-images.githubusercontent.com/94838711/174391471-04dfa492-375f-4b48-99ec-f04441267076.png" width="300"/> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>Case Brainn - Loterias Caixa</h1>
+</div>
 
-## Available Scripts
+<p align="center">
+  <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;
+  <a href="#pendente">Em desenvolvimento</a> &#xa0; | &#xa0;
+  <a href="#imagens">Imagens do Site</a>  &#xa0; | &#xa0;
+  <a href="#desenvolvedores">Desenvolvido Por</a> 
+</p>
 
-In the project directory, you can run:
+<h2 id="sobre">:notebook: Sobre </h2>
 
-### `npm start`
+<p align="center"> Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu baseado em React JS, para o desenvolvimento de um web site que mostra os resultados de sorteios das loterias da Caixa. Nele você pode selecionar uma loteria e visualizar os respectivos números sorteados. 
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2 id="link">:link: Link Surge - link para visualização do site</h2>
+ <a href="https://loterias-caixa.surge.sh/">Loterias Caixa</a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2 id="tecnologias"> 🛠 Tecnologias </h2>
 
-### `npm test`
+Ferramentas usadas na construção do projeto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React JS
+* Styled-components
+* Customs e React Hooks
+* React Router DOM
+* Integração com API
+* Axios
+* Moment
 
-### `npm run build`
+<h2 id="funciona">:heavy_check_mark: O que funciona</h2>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*  O usuário consegue selecionar a loteria que deseja  em um combo-box/select;
+*   Ao mudar escolher a loteria,  o tema do sorteio, número do sorteio, data do sorteio e números sorteados são atualizados de acordo com a loteria escolhida.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h2 id="pendente">:construction: Em desenvolvimento</h2>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ ] Responsividade;
+- [ ] Resolução de bug na renderização.
 
-### `npm run eject`
+<h2 id="imagens"> 🖥️ Imagens do site (computador)</h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![1](https://user-images.githubusercontent.com/94838711/174394779-72b2e239-a67f-4441-9c8c-0407ee2c5541.png)
+![2](https://user-images.githubusercontent.com/94838711/174394785-2d7c4624-ae30-4e97-932c-0954f618c602.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2 id="desenvolvedores">:construction_worker: Desenvolvido por:</h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<table> 
+<tr>
+ 
+ <td align="center"><a href="https://github.com/future4code/vaughan-Ana-Silva"><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/94838711/158080211-ef52ad45-7600-4479-998b-f6c423de7576.png" width="100px" alt=""/>
+ <br />
+ <sub><b>Ana Karine</b></sub></a> <a href="https://github.com/future4code/vaughan-Ana-Silva">👩🏻‍💻</a></td>
+  
+</tr>
+</table>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="#top">Voltar para o topo 🔝</a>
