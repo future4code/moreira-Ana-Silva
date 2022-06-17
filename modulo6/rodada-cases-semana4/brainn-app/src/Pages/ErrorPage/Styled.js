@@ -20,7 +20,7 @@ p{
 }
 button{
     color: #fff;
-    background-color: #EE8418;
+    background-color: #2E318A;
     height:40px;
     width: 200px;
     border-radius: 8px;
